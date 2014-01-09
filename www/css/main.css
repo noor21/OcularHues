@@ -1,0 +1,219 @@
+﻿* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    color: #222;
+    margin: 0;
+    padding: 0;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    width:100%;
+}
+
+/*Background*/
+#background {
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: -1;
+}
+
+#splash {
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    z-index: 2;
+}
+
+.stretch {
+    width:100%;
+    height:100%;
+}
+
+/*Game View*/
+.hidden {
+    display: none;
+}
+
+canvas {
+    border: 0;
+}
+
+/*Pages*/
+.Page {
+    position: absolute;
+    display: none;
+}
+
+#header h1{
+    margin: 0 auto 0 auto;
+    color: #fff;
+    display: block;
+    width: 160px;
+    text-align:center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+    text-decoration: none;
+	max-width: 160px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-shadow: #4d4d4d 0 -1px 0;
+}
+#hdrButton{
+    z-index: 2;
+    display: block;
+    position: fixed;
+    color: #222;
+    left: 10px;
+    top: 7px;
+    font: bold 16px Helvetica;
+    background-color: #e6e6e6;
+    text-decoration: none;
+    padding: 5px 10px 7px 10px;
+    border-radius: 6px;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+#header {
+    border-bottom: 1px solid #666;
+    display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+    background-color: #527077;
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.menuList ul {
+    list-style: none;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+.menuList ul li a {
+    background-color: #e8f7fa;
+    color: #4d4d4d;
+    /*text-shadow: #e6e6e6 0 1px 0;*/
+    border: 1px solid #a6a6a6;
+    font: bold 18px "Helvetica Neue", Helvetica;
+    display: block;
+    margin-bottom: -1px;
+    padding: 12px 10px;
+    text-decoration: none;
+}
+
+.menuList ul li:first-child a {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.menuList ul li:last-child a {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.content {
+    margin: 10px;
+}
+
+.li_i {
+    float:right;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    display: block;
+}
+
+a img {
+    border-width: 0;
+}
+
+/*Extras*/
+.txtBox {
+    background-color: #eeeeee;
+    color: #4d4d4d;
+    border: 1px solid #a6a6a6;
+    font: normal 18px "Helvetica Neue", Helvetica;
+    display: block;
+    margin-bottom: -1px;
+    padding: 12px 10px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.mobibutton {
+    text-align: center;
+}
+
+.level_link {
+}
+
+/*Headers*/
+h2 {
+    color: #4d4d4d;
+    font: lighter 26px Segoe UI;
+    margin-bottom: 4px;
+}
+h3 {
+    color: #4d4d4d;
+    font: normal 18px Segoe UI, Arial;
+    margin: 0;
+    padding: 8px 0 6px 0;
+}
+
+/*Paragraphs*/
+p {
+    font-size: 18px;
+}
+
+/*Specific styles*/
+#tlt_points {
+    font: bold 38px 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    color: #3d5459;/*#c46123;*/
+    margin: 6px 0 25px 0;
+}
+
+#och_logo {
+    float: right;
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin-top: -4px;
+    z-index: 1;
+}
+#c_small_text {
+    font-size: 10px;
+}
+
+#GamePage {
+    z-index: 1;
+}
+
+#greentd {
+    color: rgb(0, 128, 0);
+}
+#bluetd {
+    color: rgb(0, 0, 128);
+}
+
+@font-face {
+    font-family: DigitalDream;
+    src: url('../fonts/Idigital-Bold.otf');
+}

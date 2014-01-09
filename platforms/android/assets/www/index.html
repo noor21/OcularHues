@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+    <title>OcularHues</title>
+
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="js/sounds.js"></script>
+</head>
+<body>
+    <!--Preloads-->
+    <img src="img/greentick.png" class="hidden"/>
+    <img src="img/lock.png" class="hidden"/>
+    <audio id="s_electric_drop" class="hidden"><source src="sounds/electric_drop.mp3"/></audio>
+    <audio id="s_laser" class="hidden"><source src="sounds/laser.mp3"/></audio>
+
+    <div id="background">
+        <img src="img/background.png" class="stretch" alt="" />
+    </div>
+    <div id="splash">
+        <img src="img/splash.png" class="stretch" alt="" />
+    </div>
+
+    <div id="container" onresize="updateWidths()">
+        <div id="header">
+            <h1 id="hdrWplText">OcularHues</h1>
+            <a href="#" id="hdrButton">Back</a>
+        </div>
+		
+		<div id="Page1" class="Page">
+            <div class="content">
+                <h2>Total Points Scored</h2>
+                <p id="tlt_points"></p>
+			    <div class="menuList">
+				    <ul>
+                        <li><a href="#" id="a_unlimited">Play as long as you like...<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+            		    <li><a href="#" id="a_limited">Timelimit (2 mins)...<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+            	    </ul>
+            	    <ul>
+            	        <li><a href="#" id="a_userstats">Your Stats...<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+            	        <li><a href="#" id="a_about">About...<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+            	    </ul>
+			    </div>
+            </div>
+		</div>
+
+        <div id="Page2" class="Page">
+            <div class="content">
+                <div class="menuList">
+				    <ul>
+                        <li><a href="#" id="a_level1" class="level_link">Level 1<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+            		    <li><a href="#" id="a_level2" class="level_link">Level 2<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+                        <li><a href="#" id="a_level3" class="level_link">Level 3<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+                        <li><a href="#" id="a_level4" class="level_link">Level 4<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+                        <li><a href="#" id="a_level5" class="level_link">Level 5<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+                        <li><a href="#" id="a_level6" class="level_link">Level 6<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+                        <li><a href="#" id="a_level7" class="level_link">Level 7<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+                        <li><a href="#" id="a_level8" class="level_link">Level 8<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+                        <li><a href="#" id="a_level9" class="level_link">Level 9<span class="li_i"><img src="img/arrowright.png"/></span></a></li>
+                        <li><a href="#" id="a_level10"  class="level_link">Level 10<span class="li_i" id="i_level10"><img src="img/arrowright.png"/></span></a></li>
+            	    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="Page3" class="Page">
+            <div class="content">
+                <h2>Data Table:</h2>
+                <h2 id="greentd">Green</h2>
+                <p>Total dots:<span id="gr_total"></span><br />Tapped:<span id="gr_tapped"></span><br />Missed:<span id="gr_missed"></span></p>
+                <h2 id="bluetd">Blue</h2>
+                <p>Total dots:<span id="bl_total"></span><br />Tapped:<span id="bl_tapped"></span><br />Missed:<span id="bl_missed"></span></p>
+            </div>
+        </div>
+
+        <div id="Page4" class="Page">
+            <div class="content">
+                <img src="img/logo.png" id="och_logo"/>
+                <h2>OcularHues</h2>
+                <div id="c_small_text">&copy; 2013 Johnson Programs<br />The star image is credited to http://www.oxygen-icons.org/.</div>
+                <h2>Designed Using PhoneGap</h2>
+                <p>OccularHues was created using PhoneGap, technology that packages HTML5 web applications into native Android, iOS, Windows Phone, etc apps.</p>
+            </div>
+        </div>
+
+        <div id="Page5" class="Page"></div>
+
+    </div>
+    <script type="text/javascript" src="phonegap.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+</html>
